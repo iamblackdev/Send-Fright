@@ -2,7 +2,7 @@ import { useState } from "react";
 import ServiceToogle from "../../component/serviceToogle/serviceToogle";
 import ServiceTypeCard from "../../component/serviceTypeCard/serviceTypeCard";
 import Toogle from "../../component/toogle/toogle";
-import { dateIcon, infoIcon, mapPin, search } from "../../utils/svg";
+import { backArrow, dateIcon, infoIcon, mapPin, search } from "../../utils/svg";
 import { services } from "./data";
 import "./styles.css";
 
@@ -12,6 +12,7 @@ const NewBooking = () => {
   const [tabActive, setTabActive] = useState(1);
   return (
     <div className="new-booking-wrapper">
+      <span className="back-arrow">{backArrow} </span>
       <div className="search mobile">
         <input type="text" placeholder="Search" />
         {search}
