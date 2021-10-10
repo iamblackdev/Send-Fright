@@ -18,13 +18,21 @@ export const services = [
   },
   {
     id: 3,
-    typeName: ["Inland", <br />, "Truck & Barge"],
+    typeName: (
+      <>
+        Inland <br /> Truck & Barge
+      </>
+    ),
     icon: inlandFright,
   },
 
   {
     id: 4,
-    typeName: ["Customs", <br />, "Clearance"],
+    typeName: (
+      <>
+        Customs <br /> Clearance
+      </>
+    ),
     icon: customerIcon,
   },
 ];

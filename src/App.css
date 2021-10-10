@@ -71,6 +71,17 @@ input:focus {
 .mobile-top-btn {
   display: none;
 }
+
+.search.mobile {
+  display: none;
+}
+.search {
+  position: relative;
+  height: 30px;
+  width: 350px;
+  display: flex;
+  align-items: center;
+}
 .search input {
   color: white;
   border: none;
@@ -97,9 +108,19 @@ input:focus {
   background-color: #56c080;
   border: 2px solid #56c080;
 }
-
+@media (max-width: 954px) {
+  .search.mobile {
+    display: flex;
+    margin: 0 auto;
+  }
+  .search input {
+    border: 2px solid #d0d5d9;
+    background-color: transparent;
+  }
+}
 @media (max-width: 493px) {
   .mobile-top-btn {
+    margin-top: 15px;
     display: block;
     display: flex;
     justify-content: center;

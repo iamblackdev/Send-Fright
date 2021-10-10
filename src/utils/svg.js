@@ -88,7 +88,7 @@ export const inlandFright = (
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <g clip-path="">
+    <g clipPath="">
       <path
         d="M20.1923 6.21616C19.8671 5.60786 19.2328 5.22869 18.543 5.23023H15.9243V8.73304C15.9243 9.12318 16.2669 9.43877 16.6571 9.43877H21.9173L20.1923 6.21616Z"
         fill="#81868C"

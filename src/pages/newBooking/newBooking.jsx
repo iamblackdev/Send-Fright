@@ -12,10 +12,10 @@ const NewBooking = () => {
   const [tabActive, setTabActive] = useState(1);
   return (
     <div className="new-booking-wrapper">
-      {/* <div className="search">
+      <div className="search mobile">
         <input type="text" placeholder="Search" />
         {search}
-      </div> */}
+      </div>
       <div className="mobile-top-btn">
         <button className="request-btn">Request Quote</button>
         <button className="book-btn">Book Shipment</button>
@@ -34,6 +34,7 @@ const NewBooking = () => {
           {services.map((service) => (
             <ServiceTypeCard
               {...service}
+              key={service.id}
               onClick={(id) => setServiceSelectedId(id)}
               selected={serviceSelectedId === service.id}
             />
@@ -45,7 +46,7 @@ const NewBooking = () => {
       <div className="card cargo-location-details">
         <span>{infoIcon}</span>
         <div className="cargo-location">
-          <div class="cargo-direction">
+          <div className="cargo-direction">
             <div
               className={`import ${
                 cargoDirection === "import" ? "selected" : ""
@@ -78,7 +79,7 @@ const NewBooking = () => {
         <div className="cargo-status">
           <div className="input-append">
             {dateIcon}
-            <input type="date" value="Ready date" />
+            <input type="date" />
           </div>
           <div className="select-type">
             <select>
@@ -97,7 +98,7 @@ const NewBooking = () => {
       {/* cargo details */}
       <div className="card cargo-details-wrapper">
         <div className="section-heading-wrapper">
-          <h4 class="section-heading">Cargo Details</h4>
+          <h4 className="section-heading">Cargo Details</h4>
           <div className="dangerous-cargo">
             <Toogle />
             <span>
@@ -114,7 +115,6 @@ const NewBooking = () => {
               Total Dimention
             </span>
             <span
-              className="tab-header-btn"
               className={`tab-header-btn ${tabActive === 2 ? "selected" : ""}`}
               onClick={() => setTabActive(2)}
             >
@@ -137,7 +137,7 @@ const NewBooking = () => {
       </div>
 
       <div className="card additional-services-wrapper">
-        <h4 class="section-heading">Additional Services</h4>
+        <h4 className="section-heading">Additional Services</h4>
 
         <div className="additional-services">
           <ServiceToogle

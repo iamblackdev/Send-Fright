@@ -1,5 +1,3 @@
-import { string } from "prop-types";
-
 import "./styles.css";
 
 const ServiceTypeCard = ({ typeName, icon, selected, onClick, id }) => {
@@ -7,7 +5,7 @@ const ServiceTypeCard = ({ typeName, icon, selected, onClick, id }) => {
     <button
       type="button"
       onClick={() => onClick(id)}
-      class={`service-type ${selected ? "selected" : ""}`}
+      className={`service-type ${selected ? "selected" : ""}`}
     >
       {icon}
       {typeName}
@@ -16,7 +14,3 @@ const ServiceTypeCard = ({ typeName, icon, selected, onClick, id }) => {
 };
 
 export default ServiceTypeCard;
-
-ServiceTypeCard.propTypes = {
-  typeName: string.isRequired,
-};
