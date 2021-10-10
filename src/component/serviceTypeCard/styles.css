@@ -1,0 +1,40 @@
+.service-type {
+  text-align: left;
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding-left: 20px;
+  border-radius: 4px;
+  width: 25%;
+  height: 85px;
+  font-weight: 400;
+  background-color: transparent;
+  font-size: 16px;
+  line-height: 29px;
+  border: 1px solid #d0d5d9;
+  color: #81868c;
+  transition: all 0.5s ease-in-out;
+  overflow: hidden;
+  cursor: pointer;
+}
+.service-type:last-child {
+  margin-right: 0;
+}
+.service-type.selected {
+  border: none;
+  background: #0746a6;
+  color: #fff;
+}
+.service-type.selected svg path {
+  fill: #fff;
+}
+
+.service-type svg {
+  outline: none;
+  box-shadow: none;
+  position: absolute;
+  bottom: -12px;
+  right: -18px;
+  height: 60px;
+  width: 60px;
+}
